@@ -1,0 +1,308 @@
+html{
+  cursor: url(../images/cursor.png), auto;
+}
+
+a {
+  cursor: url(../images/click.png), auto;
+}
+
+:root {
+  --header-image: url('../images/header2.png');
+  --body-bg-image: url('../images/background_v2.jpg');
+
+  /* colors */
+  --content: #43256E;
+  --content-spacing: 5px;
+  --font-color: #00CEB5;
+  --border-width: 2px;
+  --border-style: groove;
+  --border-color: #152f28;
+  /*--border-style: dashed;
+  --border-color: #091411;*/
+  --aside-color: #11211e;
+  --title-color: #1c3631;
+  --content-color: #2b544c;
+}
+
+
+body {
+  min-width: 0px;
+  font-family: 'xga';
+  margin: 0;
+  background-color: #08031A;
+  /* you can delete the line below if you'd prefer to not use an image */
+  color: #fceaff;
+  background-image: var(--body-bg-image);
+  background-size: 200px;
+}
+
+b{
+  color: #00CEB5;
+}
+
+i{
+  opacity: 50%;
+}
+
+strong {
+  /* this styles bold text */
+  color: #00CEB5;
+}
+
+audio {
+  background-color: #319b7d;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@keyframes bottomImg {
+  from {
+    bottom: 0px
+  }
+  to {
+    bottom: -20px
+  }
+}
+
+#bottomImg{
+  height: 200px;
+  position:fixed;
+  left:0;
+  bottom:0;
+  animation-name: bottomImg;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+}
+
+#container {
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: rgba(9, 17, 15,0.2);
+}
+
+#container a {
+  color: #00CEB5;
+  font-weight: normal;
+}
+
+#topBar {
+  width: 100%;
+  height: 30px;
+  padding: 10px;
+  font-size: smaller;
+  background-color: #09110f;
+}
+
+#header {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  padding: 30px;
+  background-color: #5e4e8c;
+  margin-bottom: var(--content-spacing);
+  background-image: var(--header-image);
+  background-size: 100%;
+  background-position: 0px -145px;
+  display: flex;
+  align-items: center;
+}
+
+
+/* navigation section!! */
+#navbar {
+  height: 40px;
+  background-color: #13092D;
+  /* navbar color */
+  width: 100%;
+}
+
+#navbar ul {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  justify-content: space-evenly;
+}
+
+#navbar li {
+  padding-top: 10px;
+}
+
+/* navigation links*/
+#navbar li a {
+  color: #ED64F5;
+  /* navbar text color */
+  font-weight: 800;
+  text-decoration: none;
+  /* this removes the underline */
+}
+
+/* navigation link when a link is hovered over */
+#navbar li a:hover {
+  color: #a49cba;
+  text-decoration: underline;
+}
+
+#flex {
+  display: flex;
+}
+
+#justify {
+  text-align: justify;
+}
+
+/* this colors BOTH sidebars
+if you want to style them separately,
+create styles for #leftSidebar and #rightSidebar */
+aside {
+  background-color: var(--aside-color);
+  width: 300px;
+  padding: 20px;
+  font-size: smaller;
+  margin-left: var(--content-spacing);
+  border: var(--border-width) var(f--border-style) var(--border-color);
+  /* this makes the sidebar text slightly smaller */
+}
+
+.nav ul {
+  margin: 10px;
+  list-style-image: url('../images/sqcyan.png');
+  padding: 0 0 0 10px;
+}
+.nav ul li{
+  font-size: 20px;
+}
+
+/* this is the color of the main content area,
+between the sidebars! */
+main {
+  flex: 1;
+  order: 2;
+}
+
+/* what's this "order" stuff about??
+allow me to explain!
+if you're using both sidebars, the "order" value
+tells the CSS the order in which to display them.
+left sidebar is 1, content is 2, and right sidebar is 3! */
+
+
+#rightSidebar {
+  order: 3;
+}
+#leftSidebar {
+  order: 1;
+}
+
+footer {
+  background-color: #1c3631;
+  /* background color for footer */
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  text-align: center;
+  font-size: 16px;
+  font-family: "04B";
+  color: var(--font-color);
+  /* this centers the footer text */
+}
+
+h1,
+h2,
+h3 {
+  color: #00CEB5;
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 25px;
+}
+
+
+/* this is just a cool box, it's the darker colored one */
+.box {
+  background-color: #23433b;
+  border: 1px solid #00CEB5;
+  padding: 10px;
+}
+
+.unicodetxt{
+  font-family: 'Unicode';
+}
+
+.title {
+    margin-top: var(--content-spacing);
+    background-color: var(--title-color);
+    background: linear-gradient(to bottom, rgba(42,79,72,1) 0%, rgba(21,41,37,1) 100%);
+    border: var(--border-width) var(--border-style) var(--border-color);
+    font-size: 20px;
+    color: #00CEB5;
+    padding: 12px 10px 10px 20px;
+}
+
+.title:first-chile{
+  margin-top: 0
+}
+
+
+.content{
+  background-color: var(--content-color);
+  padding: 25px 25px 10px 25px;
+  padding-top: 10px;
+  border-width: 0px var(--border-width) var(--border-width) var(--border-width);
+  border-style: var(--border-style);
+  border-color: var(--border-color);
+}
+
+
+
+
+.mascotas div{
+  margin:auto;
+}
+
+.flex{
+  display: flex;  
+}
+
+@media (max-width: 800px) {
+  /*
+  #flex {
+      flex-wrap: wrap;
+  }
+  */
+
+  aside {
+      width: 100%;
+  }
+  #bottomImg{
+    display:none;
+  }
+  #header{
+    width: 100vw;
+  }
+
+  /* the order of the items is adjusted here for responsiveness!
+since the sidebars would be too small on a mobile device.
+feel free to play around with the order!
+*/
+  main {
+      order: 1;
+  }
+
+  #leftSidebar {
+      order: 2;
+  }
+
+  #rightSidebar {
+      order: 3;
+  }
+
+  #navbar ul {
+      flex-wrap: wrap;
+  }
+}

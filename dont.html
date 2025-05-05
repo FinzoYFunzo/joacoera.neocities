@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>JoacoEra</title>
+        <meta name="description" content="No sapee mas hijo de la maraca y metase a mi preciado blog :)">
+        <meta property="og:image" content="https://joacoera.neocities.org/images/joacoeraweb.png">
+        <link rel="icon" href="./images/favicon.png" type="image/x-icon"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8"> 
+        <link href="./style/style_2.css" rel="stylesheet" type="text/css" media="all">
+        <link href="./style/fontimport.css" rel="stylesheet" type="text/css" media="all">
+        
+        
+        <!-- Imports -->
+        <style> @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap'); </style>
+        <style>
+            body {
+                text-align: center;
+                position: relative;
+                height: 100vh;
+                display: flex;
+                flex-direction: column;
+                padding: 10px 0 10px 0px;
+            }
+            body div{
+
+            }
+            * {
+                box-sizing: border-box;
+            }
+            #container-2 div > * {
+                position: absolute;
+            }
+            #container-2{
+                margin: auto;
+                overflow: hidden;
+                position: relative;
+                max-width: 100%;
+                width: 80%;
+                height: 80vh;
+                max-height: 870px;
+                background-color: blueviolet;
+                outline: #4CAF50 solid 10px;
+                outline-color: black;                 
+            }
+            @keyframes duster3-1 {
+                0%{left: 0;}
+                50%{left: -1796px;}
+                50.00001%{left: 1796px;}
+                100%{left: 0%;}
+            }
+            @keyframes duster3-2 {
+                0%{left:1796px;}
+                100%{left:-1796px;}
+            }
+
+            #duster3 img{
+                bottom: 0px;
+                left: 0;
+                animation-timing-function: linear;
+                animation-iteration-count: infinite;
+            }
+            #duster2 img{
+                bottom: 150px;
+                left: 0;
+                animation-timing-function: linear;
+                animation-iteration-count: infinite;
+            }
+            #duster1 img{
+                bottom: 230px;
+                left: 0;
+                animation-timing-function: linear;
+                animation-iteration-count: infinite;
+            }
+            #duster3 .first{
+                animation-name: duster3-1;
+                animation-duration: 20s;
+            }
+            #duster3 .second{
+                animation-name: duster3-2;
+                animation-duration: 20s;
+            }
+            #duster2 .first{
+                animation-name: duster3-1;
+                animation-duration: 35s;
+            }
+            #duster2 .second{
+                animation-name: duster3-2;
+                animation-duration: 35s;
+            }
+            #duster1 .first{
+                animation-name: duster3-1;
+                animation-duration: 150s;
+            }
+            #duster1 .second{
+                animation-name: duster3-2;
+                animation-duration: 150s;
+            }
+
+
+            h1 {
+                z-index: 2;
+            }
+            .flip{
+                transform: scaleX(-1);
+                position: relative;
+            }
+        </style>
+    </head>
+<body>
+    <div style="margin: 10px 0 0 0;">
+        <h1>I Told You</h1>
+    </div>
+    <div id="container-2">
+        <div id="duster1">
+                <img src="images/duster1.png" class="first">
+                <img src="images/duster1.png" class="flip second">
+        </div>
+
+        <div id="duster2">
+                <img src="images/duster2.png" class="first">
+                <img src="images/duster2.png" class="flip second">
+        </div>
+
+        <div id="duster3">
+                <img src="images/duster3.png" class="first">
+                <img src="images/duster3.png" class="flip second">
+        </div>
+    </div>
+    <div>
+        <p style="margin: 0;">Duster - Stratosphere (album)</p>
+        <p style="margin: 0;font-size: x-small;">Current playing:  <span id="current-playing"></span></p>
+    </div>
+    <div id="player"></div>
+    <script>
+        var musicId = ["VZiQJPEpUb8","JiDuubzc5yI","ghVC-ZXCxt0","lF0RNAIK8","L0Md85_00Os","hBStpx6zbHw","EMcAcY83S7U","j3i_-mTVkZk","DE-vS9RLN3U","xUAUxobeQ5s","8ElVb8YQbmI","ihbmjpHL_GI","ghz9es1UaPo","WDtH__GYbrA","s2GC5qGR__g","4Jx4rGIos3M","drTFFJY_F2A"]
+        
+        var musicName = ["Moon Age","Heading for the Door","Gold Dust","Topical Solution","Docking the Pod","The Landing","Echo, Bravo","Constellations","The Queen of Hearts","Two Way Radio","Inside Out","Stratosphere","Reed to Hillsborough","Shadows of Planes","Earth Moon Transit","The Twins / Romantica","Sideria"]
+        
+
+        function getRandomInt(max) {
+          return Math.floor(Math.random() * max);
+        }
+        
+        var ranNum = getRandomInt(17)
+        
+        // 2. This code loads the IFrame Player API code asynchronously.
+        var tag = document.createElement('script');
+  
+        tag.src = "https://www.youtube.com/iframe_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+  
+        // 3. This function creates an <iframe> (and YouTube player)
+        //    after the API code downloads.
+        
+        var player;
+        function onYouTubeIframeAPIReady() {
+          player = new YT.Player('player', {
+            height: '0',
+            width: '0',
+            videoId: musicId[ranNum],
+            playerVars: {
+              'playsinline': 1
+            },
+            events: {
+              'onReady': onPlayerReady
+            }
+          });
+        }
+  
+        function onPlayerReady(event) {
+            event.target.playVideo();
+            player.setVolume(30);
+            player.seekTo(0,true);
+        }
+
+        document.getElementById("current-playing").innerHTML = musicName[ranNum]
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+#galery img{
+  width: 20px;
+}
+p {
+  margin: 10px 0 10px 0;
+  text-align: justify;
+}
+
+.title p {
+  display: inline;
+  margin: 0;
+}
+.post-footer{
+  height: auto;
+  text-align: right;
+}
+
+
+.caption {
+  display: inline;
+}
+.caption p {
+  display: inline;
+}
+.date {
+  color: aliceblue;
+  text-align: right;
+  display: inline;
+}
+
+.date p {
+  font-size: 15px;
+  display: inline;
+  opacity: 0.4;
+}
+
+.u-cursos {
+  display: inline;
+  opacity: 100%;
+  position: relative;
+  top: 2px;
+  width: 16px;
+  content: url(https://www.u-cursos.cl/d/imglocal/favicon/favicon-32x32.png);
+}
+
+.album-cover{
+  display: flex; 
+  flex-direction: column; 
+  width: 40%; text-align: center;
+}
+
+.album-audio{
+  display: flex;
+  flex-direction: column;
+  width: 100%; 
+  padding-right: 10px;
+}

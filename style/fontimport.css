@@ -1,0 +1,52 @@
+@font-face {
+  font-family: "Nunito";
+  src: url('https://sadhost.neocities.org/fonts/Nunito-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Nunito';
+  src: url('https://sadhost.neocities.org/fonts/Nunito-Bold.ttf');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: Nunito;
+  src: url('https://sadhost.neocities.org/fonts/Nunito-Italic.ttf');
+  font-style: italic;
+}
+
+@font-face {
+  font-family: Nunito;
+  src: url('https://sadhost.neocities.org/fonts/Nunito-BoldItalic.ttf');
+  font-style: italic;
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "xga";
+  src: url('font/xga.ttf');
+}
+
+@font-face {
+  font-family: "Rantera";
+  src: url('font/Rantera.otf');
+}
+
+@font-face {
+  font-family: "Alagard";
+  src: url('font/alagard.ttf');
+}
+
+@font-face {
+  font-family: "Unicode";
+  src: url('font/NotoSans-Regular.ttf');
+}
+
+@font-face {
+  font-family: "04B";
+  src: url('font/04B_03__.ttf');
+}
+@font-face {
+  font-family: "CMU_Roman";
+  src: url('font/cmunrm.ttf');
+}
