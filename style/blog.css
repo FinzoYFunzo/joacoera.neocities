@@ -1,27 +1,45 @@
-#galery img{
+#galery img {
   width: 20px;
 }
+
 p {
   margin: 10px 0 10px 0;
   text-align: justify;
+}
+
+.title {
+  width: 100%;
 }
 
 .title p {
   display: inline;
   margin: 0;
 }
-.post-footer{
+
+.content {
+  width: 100%;
+}
+
+.post-footer {
   height: auto;
   text-align: right;
 }
 
+#posts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
 
 .caption {
   display: inline;
 }
+
 .caption p {
   display: inline;
 }
+
 .date {
   color: aliceblue;
   text-align: right;
@@ -43,15 +61,16 @@ p {
   content: url(https://www.u-cursos.cl/d/imglocal/favicon/favicon-32x32.png);
 }
 
-.album-cover{
-  display: flex; 
-  flex-direction: column; 
-  width: 40%; text-align: center;
-}
-
-.album-audio{
+.album-cover {
   display: flex;
   flex-direction: column;
-  width: 100%; 
+  width: 40%;
+  text-align: center;
+}
+
+.album-audio {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
   padding-right: 10px;
 }
