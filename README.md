@@ -1,8 +1,10 @@
-<div style="text-align: center;">
+<p style="align: center;">
   <a href="https://joacoera.neocities.org/">
     <img src="https://joacoera.neocities.org/images/title.gif" alt="JoacoEra">
   </a>
-</div>
+</p>
+
+<span style="color: gray;">Alojado en Neocities (click en la imagen)</span>
 
 ---
 
@@ -17,3 +19,4 @@ Recomiendo utilizar `live-server` para desarrollar sitios estáticos.
 npm install -g live-server
 live-server
 ```
+
